@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Generated App',
-      theme: new ThemeData(
-        primarySwatch: Colors.red,
-        primaryColor: const Color(0xFFf44336),
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.red,
-        ).copyWith(secondary: const Color(0xFFf44336)),
-        canvasColor: const Color(0xFFffffff),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xff2196f3),
+        canvasColor: const Color(0xffafafa),
       ),
-      home: new MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -25,22 +22,26 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(title: new Text('App Name')),
-      body: new Text(
-        "hello flutter!",
-        style: new TextStyle(
-          fontSize: 32.0,
-          color: const Color(0xFF000000),
-          fontWeight: FontWeight.w700,
-          fontFamily: "Roboto",
+    return Scaffold(
+      appBar: AppBar(title: Text('App Name')),
+      body: Container(
+        child: Text(
+          "Hello Flutter!",
+          style: TextStyle(
+            fontSize: 32.0,
+            color: const Color(0xff000000),
+            fontWeight: FontWeight.w700,
+            fontFamily: "Roboto",
+          ),
         ),
+        padding: const EdgeInsets.all(10.0),
+        alignment: Alignment.bottomCenter,
       ),
     );
   }
